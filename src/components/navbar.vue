@@ -14,7 +14,10 @@
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-item-dropdown right disabled>
+          <!-- Note: can add a prop to the dropdown below called "disabled" put it after the prop "right".
+          This will disable the interaction with the dropdown menu on the right. Can be useful for managing 
+          state in login mode -->
+          <b-nav-item-dropdown right>
             <!-- Using 'button-content' slot -->
             <template slot="button-content"><em>User</em></template>
             <b-dropdown-item href="#">Profile</b-dropdown-item>
