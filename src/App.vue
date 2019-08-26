@@ -23,7 +23,6 @@ export default {
 </script>
 
 <style>
-
 #app {
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,6 +1,7 @@
 <template>
   <div class="navbar-component">
-    <b-navbar toggleable="lg" type="light" variant="light">
+    <!-- Note: navbar is using dark theme currently, all white page is throwing me off and wanted opinions -->
+    <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand href="#">Fantas-e</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -54,7 +55,11 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .navbar-component{
-    background: red !important;
+  .navbar-brand {
+    font-weight: bold;
+  }
+
+  .navbar-nav {
+    font-weight: bold;
   }
 </style>
