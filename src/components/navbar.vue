@@ -55,6 +55,10 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .navbar{
+    padding: 1.0rem 1rem;
+  }
+
   .navbar-brand {
     font-weight: bold;
   }
