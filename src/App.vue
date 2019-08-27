@@ -1,19 +1,18 @@
 <template>
   <div id="app">
     <navbar />
-    <landing />
+    <router-view />
   </div>
 </template>
 
 <script>
 import navbar from './components/navbar.vue'
-import landing from './components/landing.vue'
+import landing from './components/vues/landing.vue'
 
 export default {
   name: 'app',
   components: {
-    navbar,
-    landing
+    navbar
   },
   created(){
   

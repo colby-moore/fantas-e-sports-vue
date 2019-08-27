@@ -8,9 +8,9 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">Events</b-nav-item>
-          <b-nav-item href="#">Leaderboards</b-nav-item>
-          <b-nav-item href="#">News</b-nav-item>
+          <b-nav-item href="/">Events</b-nav-item>
+          <b-nav-item href="/">Leaderboards</b-nav-item>
+          <b-nav-item href="/login">News</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -20,7 +20,7 @@
           state in login mode -->
           <b-nav-item-dropdown right>
             <!-- Using 'button-content' slot -->
-            <template slot="button-content"><em>User</em></template>
+            <template slot="button-content"><em v-if=user in users>User</em><em v-else href='./vues/login'>Login</em></template>
             <b-dropdown-item href="#">Profile</b-dropdown-item>
             <b-dropdown-item href="#">Sign Out</b-dropdown-item>
           </b-nav-item-dropdown>
@@ -38,16 +38,7 @@
     },
     data() {
       return {
-        items: [{
-            color: 'blue'
-          },
-          {
-            color: 'red'
-          },
-          {
-            color: 'green'
-          }
-        ]
+        users: []
       }
     }
   }
