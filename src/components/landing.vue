@@ -1,5 +1,6 @@
 <template>
     <div>
+        <navbar />
         <div class="landing-carousel">
             <h1 class="landing-carousel-header">Fantas-e</h1>
             <!-- Note: want to find a way to overide the "indicators" prop for the carousel to make a custom look...
@@ -59,8 +60,13 @@
 </template>
 
 <script>
+import navbar from './navbar.vue'
+
     export default {
         name: 'landing',
+        components: {
+            navbar
+        },
     }
 </script>
 

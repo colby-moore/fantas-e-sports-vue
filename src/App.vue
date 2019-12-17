@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <navbar />
-    <landing />
+    <!-- <navbar />
+    <landing /> -->
+    <!-- <login /> -->
+    <router-view/>
   </div>
 </template>
 
 <script>
 import navbar from './components/navbar.vue'
 import landing from './components/landing.vue'
+import login from './components/login.vue'
 
 export default {
   name: 'app',
   components: {
     navbar,
-    landing
+    landing,
+    login
   },
   created(){
   
