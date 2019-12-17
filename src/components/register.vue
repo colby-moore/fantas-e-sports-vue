@@ -1,8 +1,8 @@
 <template>
-  <b-container class="login-container">
+  <b-container class="register-container">
         <b-row>
-            <div class="login">
-                <h3>Fantas-e Login</h3>
+            <div class="register">
+                <h3>Fantas-e Register</h3>
                 
                 <input 
                 type="text" 
@@ -22,7 +22,7 @@
 
                 <br/>
 
-                <button v-on:click="login" class="button">Enter</button>
+                <button v-on:click="register" class="button">Enter</button>
 
                 <!-- <p><router-link to="/signup">
                 New Here? Create a new account
@@ -37,7 +37,7 @@ import firebase from 'firebase'
 
 
 export default {
-    name: 'login',
+    name: 'register',
     data: function() {
       return {
         email: '',
@@ -45,15 +45,28 @@ export default {
       }
     },
     methods: {
-        login () {
-            console.log("test login");
-         }
+        register: function(e) {
+        firebase
+            .auth()
+            .createUserWithEmailAndPassword(this.email, this.password)
+            .then(
+                user => {
+                    // console.log(user);
+                    alert(`Account Created for ${user.email}`);
+                    this.$router.go({ path: this.$router.path });
+                },
+                err => {
+                    alert(err.message);
+                }
+            );
+            e.preventDefault();
+        }
     }
 }
 </script>
 
 <style>
-    .login-container{
+    .register-container{
         display: flex;
         justify-content: center;
         align-items: center;
