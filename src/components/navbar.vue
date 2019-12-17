@@ -8,9 +8,9 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">Events</b-nav-item>
-          <b-nav-item href="#">Leaderboards</b-nav-item>
-          <b-nav-item href="#">News</b-nav-item>
+          <b-nav-item href="/">Events</b-nav-item>
+          <b-nav-item href="/">Leaderboards</b-nav-item>
+          <b-nav-item href="/login">News</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -42,16 +42,7 @@
     },
     data() {
       return {
-        items: [{
-            color: 'blue'
-          },
-          {
-            color: 'red'
-          },
-          {
-            color: 'green'
-          }
-        ]
+        users: []
       }
     }
   }
@@ -59,6 +50,10 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .navbar{
+    padding: 1.0rem 1rem;
+  }
+
   .navbar-brand {
     font-weight: bold;
   }

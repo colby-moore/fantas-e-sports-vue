@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
 import App from './App.vue'
 import BootstrapVue from 'bootstrap-vue'
 import Router from 'vue-router'
@@ -31,6 +32,7 @@ let router = new Router({
 Vue.config.productionTip = false
 
 new Vue({
+  router,
   render: h => h(App),
   router,
 }).$mount('#app')

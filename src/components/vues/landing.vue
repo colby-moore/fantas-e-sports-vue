@@ -9,11 +9,11 @@
                 img-width="1024" img-height="480">
                 <!-- Note: that these are using imgur links to the image source rather than the assets folder,
                 having trouble with carousele getting an absolute image path by passing the path to the prop of "img-src" -->
-                <b-carousel-slide caption="First slide" img-src="https://i.imgur.com/GMUq4pc.jpg">
+                <b-carousel-slide img-src="https://i.imgur.com/GMUq4pc.jpg">
                 </b-carousel-slide>
-                <b-carousel-slide caption="Second Slide" img-src="https://i.imgur.com/SfT1C8j.jpg">
+                <b-carousel-slide img-src="https://i.imgur.com/SfT1C8j.jpg">
                 </b-carousel-slide>
-                <b-carousel-slide caption="Third Slide" img-src="https://i.imgur.com/dKxsDAC.jpg">
+                <b-carousel-slide img-src="https://i.imgur.com/dKxsDAC.jpg">
                 </b-carousel-slide>
             </b-carousel>
         </div>
@@ -48,7 +48,6 @@
         <b-container fluid class="hero-image">
             <img src="https://i.imgur.com/w21iqyq.jpg" alt="">
             <b-row class="hero-text">
-
                 <h4>Draft Players<br>
                     Play with Friends <br>
                     Be the Best at Every Major</h4>
