@@ -56,7 +56,7 @@ export default {
             .then(
                 user => {
                     // console.log(user);
-                    alert(`Account Created for ${user.email}`);
+                    alert(`Account Created for ${user.user.email}`);
                     this.$router.push('/')
                 },
                 err => {

@@ -11,6 +11,7 @@
           <b-nav-item href="/">Events</b-nav-item>
           <b-nav-item href="/">Leaderboards</b-nav-item>
           <b-nav-item href="/login">News</b-nav-item>
+          <b-nav-item href="/login">{{ this.currentUser }}</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -21,12 +22,19 @@
           <b-nav-item-dropdown right>
             <!-- Using 'button-content' slot -->
             <template slot="button-content"><em>User</em></template>
-            <b-dropdown-item href="#">
+            <b-dropdown-item v-if="!isLoggedIn">
               <router-link to="/login">
                 <p>Sign In</p>
               </router-link>
             </b-dropdown-item>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
+            <b-dropdown-item v-if="!isLoggedIn">
+              <router-link to="/register">
+                <p>Register</p>
+              </router-link>
+            </b-dropdown-item>
+            <b-dropdown-item v-if="isLoggedIn">
+                <p v-on:click="logout">Logout</p>
+            </b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
@@ -35,6 +43,8 @@
 </template>
 
 <script>
+import firebase from 'firebase'
+
   export default {
     name: 'navbar',
     props: {
@@ -42,7 +52,24 @@
     },
     data() {
       return {
-        users: []
+        isLoggedIn: false,
+        currentUser: false
+
+      }
+    },
+    created() { 
+        if(firebase.auth().currentUser){
+        this.isLoggedIn = true;
+        this.currentUser = firebase.auth().currentUser.email;
+       }
+    },
+    methods: {
+      logout: function(){
+        firebase
+          .auth()
+          .signOut()
+          .then(() => {this.router.push('/login');
+          });
       }
     }
   }

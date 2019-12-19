@@ -58,12 +58,11 @@
 </template>
 
 <script>
-import navbar from './navbar.vue'
 
     export default {
         name: 'landing',
         components: {
-            navbar
+
         },
     }
 </script>
