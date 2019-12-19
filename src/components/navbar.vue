@@ -11,7 +11,7 @@
           <b-nav-item href="/">Events</b-nav-item>
           <b-nav-item href="/">Leaderboards</b-nav-item>
           <b-nav-item href="/login">News</b-nav-item>
-          <b-nav-item href="/login">{{ this.currentUser }}</b-nav-item>
+          <b-nav-item href="/login">Logged in as: {{ this.currentUser }}</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
