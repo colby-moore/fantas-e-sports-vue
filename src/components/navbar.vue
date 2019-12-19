@@ -2,7 +2,11 @@
   <div class="navbar-component">
     <!-- Note: navbar is using dark theme currently, all white page is throwing me off and wanted opinions -->
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand href="#">Fantas-e</b-navbar-brand>
+      <b-navbar-brand href="#">
+        <router-link to="/">
+          Fantas-e
+        </router-link>
+      </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
