@@ -77,7 +77,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: calc(100vh - 72px);
+        height: calc(100vh - 92px);
     }
 
     .logo{
