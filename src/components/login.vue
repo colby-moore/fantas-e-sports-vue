@@ -2,7 +2,7 @@
   <b-container fluid class="login-container">
         <b-row>
             <div class="login-form">
-                
+                <img class="logo" src="@/assets/fake-logos/logo1.svg" alt="">
                 <h3 class="login-header">Fantas-e Login</h3>
                 
                 <div class="">
@@ -27,9 +27,11 @@
                     <button v-on:click="login" class="button">Sign in</button>
                 </div>
 
-                <!-- <p><router-link to="/signup">
-                New Here? Create a new account
-                </router-link></p> -->
+                <p class="register-link">
+                    <router-link to="/register">
+                        New Here? Create a new account
+                    </router-link>
+                </p>
             </div>
         </b-row>
     </b-container>
@@ -77,6 +79,10 @@ export default {
         height: calc(100vh - 72px);
     }
 
+    .logo{
+        width: 75px;
+    }
+
     .login-header{
         margin-bottom: 30px;
         font-family: 'Open Sans'; 
@@ -84,6 +90,7 @@ export default {
     }
 
     .login-form{
+        position: relative;
         background-color: white;
         padding: 100px 50px;
         border-radius: 8px;
@@ -114,5 +121,13 @@ export default {
         -webkit-box-shadow: 0px 6px 23px -4px rgba(78,228,78,.6);
         -moz-box-shadow: 0px 6px 23px -4px rgba(78,228,78,.6);
         box-shadow: 0px 6px 23px -4px rgba(78,228,78,.6);
+    }
+
+    .register-link{
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        margin: auto;
+        right: 0;
     }
 </style>

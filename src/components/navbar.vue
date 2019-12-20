@@ -4,7 +4,7 @@
     <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand href="#">
         <router-link to="/">
-          Fantas-e
+          <img class="logo" src="@/assets/fake-logos/logo1.svg" alt="">
         </router-link>
       </b-navbar-brand>
 
@@ -72,7 +72,8 @@ import firebase from 'firebase'
         firebase
           .auth()
           .signOut()
-          .then(() => {this.router.push('/login');
+          .then(() => {
+            this.$router.push('/login')
           });
       }
     }
@@ -85,7 +86,12 @@ import firebase from 'firebase'
     padding: 1.0rem 1rem;
   }
 
+  .logo{
+    width:50px;
+  }
+
   .navbar-brand {
+    width: 50px;
     font-weight: bold;
   }
 

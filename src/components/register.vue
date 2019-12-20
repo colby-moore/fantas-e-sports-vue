@@ -2,7 +2,7 @@
 <b-container fluid class="register-container">
         <b-row>
             <div class="register-form">
-                
+                <img class="logo" src="@/assets/fake-logos/logo1.svg" alt="">
                 <h3 class="register-header">Fantas-e Register</h3>
                 
                 <div class="">
@@ -27,9 +27,11 @@
                     <button v-on:click="register" class="button">Register</button>
                 </div>
 
-                <!-- <p><router-link to="/signup">
-                New Here? Create a new account
-                </router-link></p> -->
+                <p class="login-link">
+                    <router-link to="/login">
+                        Already have an account? Sign in here
+                    </router-link>
+                </p>
             </div>
         </b-row>
     </b-container>
@@ -78,6 +80,10 @@ export default {
         height: calc(100vh - 72px);
     }
 
+    .logo{
+        width: 75px;
+    }
+
     .register-header{
         margin-bottom: 30px; 
         font-family: 'Open Sans'; 
@@ -85,6 +91,7 @@ export default {
     }
 
     .register-form{
+        position: relative;
         background-color: white;
         padding: 100px 50px;
         border-radius: 8px;
@@ -115,5 +122,13 @@ export default {
         -webkit-box-shadow: 0px 6px 23px -4px rgba(78,228,78,.6);
         -moz-box-shadow: 0px 6px 23px -4px rgba(78,228,78,.6);
         box-shadow: 0px 6px 23px -4px rgba(78,228,78,.6);
+    }
+
+    .login-link{
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        margin: auto;
+        right: 0;
     }
 </style>
