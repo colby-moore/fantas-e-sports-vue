@@ -8,12 +8,13 @@
                 img-width="1024" img-height="480">
                 <!-- Note: that these are using imgur links to the image source rather than the assets folder,
                 having trouble with carousele getting an absolute image path by passing the path to the prop of "img-src" -->
-                <b-carousel-slide img-src="https://i.imgur.com/GMUq4pc.jpg">
+                <!-- <b-carousel-slide img-src="https://i.imgur.com/GMUq4pc.jpg">
                 </b-carousel-slide>
                 <b-carousel-slide img-src="https://i.imgur.com/SfT1C8j.jpg">
                 </b-carousel-slide>
                 <b-carousel-slide img-src="https://i.imgur.com/dKxsDAC.jpg">
-                </b-carousel-slide>
+                </b-carousel-slide> -->
+                <img src="@/assets/carousel/infernoA.jpg" />
             </b-carousel>
         </div>
         <div class="landing-about-fantase">
@@ -74,7 +75,8 @@
     to a minimum as it seperates out for each component */
     .landing-carousel {
         position: relative;
-        font-family: 'Pacifico', cursive;
+        /* font-family: 'Pacifico', cursive; */
+        font-family: sans-serif
     }
 
     .landing-carousel-header {
@@ -87,7 +89,8 @@
         position: absolute;
         opacity: .8;
         letter-spacing: 12.5px;
-        font-family: 'pacifico';
+        /* font-family: 'pacifico'; */
+        font-family: sans-serif;
         font-size: 11.5vw;
         color: #333;
     }

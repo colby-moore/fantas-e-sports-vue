@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import login from '../components/login.vue'
 import landing from '../components/landing.vue'
 import register from '../components/register.vue'
+import profile from '../components/profile.vue'
+import players from '../components/players.vue'
 import firebase from 'firebase'
 
 
@@ -24,6 +26,16 @@ let router = new Router({
         path: '/register',
         name: 'register',
         component: register
+      },
+      {
+        path: '/profile',
+        name: 'profile',
+        component: profile
+      },
+      {
+        path: '/players',
+        name: 'players',
+        component: players
       },
   ]
 })

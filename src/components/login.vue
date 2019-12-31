@@ -1,9 +1,10 @@
 <template>
   <b-container fluid class="login-container">
+      <img class="login-container-background" src="@/assets/carousel/infernoAcontrast.jpg" />
         <b-row>
             <div class="login-form">
                 <img class="logo" src="@/assets/fake-logos/logo1.svg" alt="">
-                <h3 class="login-header">Fantas-e Login</h3>
+                <h3 class="login-header">Fantas-e<br>Login</h3>
                 
                 <div class="">
                     <input 
@@ -72,11 +73,19 @@ export default {
 
 <style scoped>
     .login-container{
-        background-color: mediumaquamarine;
+        background: linear-gradient(45deg, rgb(0%, 0%, 0%, .7),rgb(100%, 100%, 91%,.7));
         display: flex;
         justify-content: center;
         align-items: center;
         height: calc(100vh - 92px);
+    }
+
+    .login-container-background{
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: calc(100% - 92px);
+        z-index: -1;
     }
 
     .logo{
@@ -84,15 +93,15 @@ export default {
     }
 
     .login-header{
-        margin-bottom: 30px;
-        font-family: 'Open Sans'; 
+        margin: 10px 0 30px 0;
+        font-family: 'Open Sans', sans-serif; 
         font-weight: bold;
     }
 
     .login-form{
         position: relative;
         background-color: white;
-        padding: 100px 50px;
+        padding: 60px 50px 100px 50px;
         border-radius: 8px;
     }
 
