@@ -14,7 +14,6 @@
                 </b-carousel-slide>
                 <b-carousel-slide img-src="https://i.imgur.com/dKxsDAC.jpg">
                 </b-carousel-slide>
-                <img src="@/assets/carousel/infernoA.jpg" />
             </b-carousel>
         </div>
         <div class="landing-about-fantase">
@@ -76,7 +75,6 @@
     .landing-carousel {
         position: relative;
         font-family: 'Pacifico', cursive;
-        /* font-family: sans-serif */
     }
 
     .landing-carousel-header {
@@ -90,7 +88,6 @@
         opacity: .8;
         letter-spacing: 12.5px;
         font-family: 'pacifico';
-        /* font-family: sans-serif; */
         font-size: 11.5vw;
         color: #333;
     }

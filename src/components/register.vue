@@ -80,7 +80,7 @@ export default {
 
 <style scoped>
     .register-container{
-        background: linear-gradient(45deg, rgb(0%, 0%, 0%, .7),rgb(100%, 100%, 91%,.7));
+        background: linear-gradient(45deg, rgb(0%, 0%, 0%, .9),rgb(100%, 100%, 91%,.7));
         display: flex;
         justify-content: center;
         align-items: center;
