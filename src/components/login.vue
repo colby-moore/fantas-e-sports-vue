@@ -47,24 +47,30 @@ export default {
     data: function() {
       return {
         email: '',
-        password: ''
+        password: '',
+        debug: true
       }
     },
     methods: {
         login: function(e) {
-            firebase
-                .auth()
-                .signInWithEmailAndPassword(this.email, this.password)
-                .then(
-                user => {
-                    alert(`You are logged in as ${user.user.email}`);
-                    this.$router.push('/')
-                },
-                err => {
-                    alert(err.message);
-                }
-                );
-            e.preventDefault();
+            if(this.debug){
+                this.$router.push('/')
+            }
+            else{
+                firebase
+                    .auth()
+                    .signInWithEmailAndPassword(this.email, this.password)
+                    .then(
+                    user => {
+                        alert(`You are logged in as ${user.user.email}`);
+                        this.$router.push('/')
+                    },
+                    err => {
+                        alert(err.message);
+                    }
+                    );
+                e.preventDefault();
+            }
         }
     }
 }

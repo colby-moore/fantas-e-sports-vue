@@ -48,25 +48,31 @@ export default {
     data: function() {
       return {
         email: '',
-        password: ''
+        password: '',
+        debug: true
       }
     },
     methods: {
         register: function(e) {
-        firebase
-            .auth()
-            .createUserWithEmailAndPassword(this.email, this.password)
-            .then(
-                user => {
-                    // console.log(user);
-                    alert(`Account Created for ${user.user.email}`);
-                    this.$router.push('/')
-                },
-                err => {
-                    alert(err.message);
-                }
-            );
-            e.preventDefault();
+            if(this.debug){
+                this.$router.push('/')
+            }
+            else{
+                firebase
+                    .auth()
+                    .createUserWithEmailAndPassword(this.email, this.password)
+                    .then(
+                        user => {
+                            // console.log(user);
+                            alert(`Account Created for ${user.user.email}`)
+                            this.$router.push('/')
+                        },
+                        err => {
+                            alert(err.message)
+                        }
+                    );
+                e.preventDefault()
+            }
         }
     }
 }

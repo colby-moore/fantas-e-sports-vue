@@ -2,16 +2,12 @@
   <div id="players">
     <b-container fluid>
         <b-row class="players-to-row">
-            <playerCard />
-            <playerCard />
-            <playerCard />
-            <playerCard />
-            <playerCard />
-            <playerCard />
-            <playerCard />
-            <playerCard />
-            <playerCard />
-            <playerCard />
+            <playerCard @click="addCardToList"/>
+            <playerCard @click="addCardToList"/>
+            <playerCard @click="addCardToList"/>
+            <playerCard @click="addCardToList"/>
+            <playerCard @click="addCardToList"/>
+            <playerCard @click="addCardToList"/>
         </b-row>
     </b-container>
   </div>
@@ -24,6 +20,16 @@ export default {
     name: 'players',
     components: {
         playerCard
+    },
+    data: function(){
+        return{
+            choosenCards: [],
+        }
+    },
+    methods:{
+        addCardToList(value) {
+            // this.choosenCards.push(value)
+        }
     }
 }
 </script>
